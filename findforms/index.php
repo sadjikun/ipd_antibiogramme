@@ -55,7 +55,7 @@
 <!-- Page for Bactério -->
 <!-- ----------------- -->
 <!-- ----------------- -->
-<form id="bacterioform" method="POST" action="php/pageToGoBacterio.php" style="font-weight: normal;width:91%" class="div_table_style_class" >
+<form id="bacterioform" method="POST" style="font-weight: normal;width:91%" class="div_table_style_class" >
     <div style="font-weight: bold;display: none;" id="div_nav_modif" >
         <a id="bt_moins"  href='javascript:void(0)' class="class_bt_suiv_prec"><img src="images/left.png"/></a>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -474,7 +474,7 @@
     <!-- Modal 1 -->
 
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Enregistrement des informations</h5>
@@ -485,7 +485,7 @@
                 <div class="modal-body">
                     <table  id="" style="width:95%;border-spacing: 7px;">  
                         <tr>
-                            <td><label id="label_germe1_identifie" for="germe1_identifie" >Germe1 identifié </label></td>
+                            <td><label id="label_germe1_idenmtifie" for="germe1_identifie" >Germe1 identifié </label></td>
                             <td>
                                 <select id="germe1_identifie" name="germe1_identifie" >
                                     <option value=""></option>
@@ -494,7 +494,6 @@
                                     <option value="shigelles">Shigelles</option>
                                 </select> 
                             </td>
-
                             <td><label id="label_germe1_identifie" for="germe1_identifie" >Si le germe est non-identifié, renseignez ici </label></td>
                             <td><input type="text" id="germe1_identifie" name="germe1_identifie" class="inputs2"/></td>
                         </tr>
@@ -521,11 +520,9 @@
                         <tr>
                             <td><label id="label_code_patient_ipg" for="code_patient_ipg" >Code patient </label></td>
                             <td><input type="text" id="code_patient_ipg" name="code_patient_ipg" class="inputs2"/></td>
-
                             <td><label id="label_date_reception_ipg" for="date_reception_ipg" >Date de réception au labo</label></td>
                             <td>
                                 <input type="text" id="date_reception_ipg" name="date_reception_ipg" class="inputs2"/>
-
                                 <script type = "text/javascript" >
                                     new JsDatePick({
                                     useMode: 2,
@@ -539,28 +536,29 @@
                                 </a>
 
                             </td>
-                            <td></td>
-
                             <td><label id="label_germe_ipg" for="code_germe_ipg" >Code germe </label></td>
                             <td><input type="text" id="code_germe_ipg" name="code_germe_ipg" class="inputs2"/></td>
                         </tr>
-                        <br><br><br>
-                        <hr>
+                    </table>
+                    <table class="ipg" style="display:none; width:95%; border-spacing: 7px;" id="first">
                         <tr>
-                            <td><label for="antibiotique_1" id="label_antibiotique_1">Antibiotique 1</label></td>
-                            <td><input type="text" id="code_patient_ipg" name="code_patient_ipg" class="inputs2"/></td>
+                            <td><label for="antibiotique_1" id="label_antibiotique_1">Antibiotique 1</label>
+                            <input type="text" id="antibiotique_1" name="antibiotique_1" class="inputs2"/></td>
+                            <td><label for="sensible_1"> Sensible</label></td>
+                            <td><input type="radio" id="sensible_1" name="antibiotique_1"></td>
+                            <td><label for="intermédiaire_1"> Intermédiaire</label></td>
+                            <td><input type="radio" id="intermédiaire_1" name="antibiotique_1"></td>
+
+                            <td><label for="résistant_1"> Résistant</label></td>  
+                            <td><input type="radio" id="résistant_1" name="antibiotique_1"></td>
                             <td>
-                                <label for="sensible_1"> Sensible</label>
-                                <input type="checkbox" id="sensible_1" name="sensible_1">
+                                <button type="button" class="btn btn-primary" id="add-new-antibiotique">Ajouter</button>
+                                <!-- <input class="btn btn-primary btn-sm" type="button" value="Ajouter" id="add-new-antibiotique" > -->
+
                             </td>
-                            <td>
-                                <label for="intermédiaire_1"> Intermédiaire</label>
-                                <input type="checkbox" id="intermédiaire_1" name="intermédiaire_1">
-                            </td>
-                            <td>
-                                <label for="résistant_1"> Résistant</label>
-                                <input type="checkbox" id="résistant_1" name="résistant_1">
-                            </td>
+                        </tr>
+                        <tr>
+
                         </tr>
                     </table>
 

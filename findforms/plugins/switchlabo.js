@@ -155,19 +155,39 @@ $(document).ready(function(){
 
 
 
-	
+
 	// SADJI -- Antibiogramme
 
     // showing different elements for Antibiogramme
     $("#antibiogramme_fait").on('change',function(){    
     	if ($(this).val() == "oui") {
 			var x = document.getElementsByClassName("ipg");
-			x[0].style.display = "table";			
+			x[0].style.display = "table";
+			x[1].style.display = "table";
     	}else{
 			var x = document.getElementsByClassName("ipg");
 			x[0].style.display = "none";
+			x[1].style.display = "none";
+
 		}
     });
+
+
+	const antibiotiqueValue = document.querySelector('#antibiotique_1');
+
+	const addBtn = document.querySelector('#add-new-antibiotique');
+
+	addBtn.addEventListener('click', addNewAntibiotique);
+
+	function addNewAntibiotique(e){
+		if (antibiotiqueValue === "" ){
+			alert('ERROR');
+		}
+		//  else{ 
+		// 	const tr = document.createElement('tr');
+		// 	tr.appendChild(document.createTextNode)
+		// } 
+	}
 
 
 
