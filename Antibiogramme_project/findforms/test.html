@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	
+		<title>Document</title>
+	
+</head>
+<body>
+	    <!-- SADJI Form START  -->
+
+    <!-- Buttons -->
+    <table  id="" style="width:95%;border-spacing: 7px;">  
+        <tr>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1"> button 1 </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2"> button 2 </button>
+            </td>					  										
+        </tr>
+    </table>
+    <!-- Modal 1 -->
+
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table  id="" style="width:95%;border-spacing: 7px;">  
+                <tr>
+                    <td><label id="label_germe1_identifie" for="germe1_identifie" >Germe1 identifié </label></td>
+                    <td>
+                        <select id="germe1_identifie" name="germe1_identifie" >
+                            <option value=""></option>
+                            <option value="escherichia_coli">Escherichia coli</option>
+                            <option value="salmonella">Salmonella</option>
+                            <option value="shigelles">Shigelles</option>
+                        </select> 
+                    </td>
+
+                    <td><label id="label_germe1_identifie" for="germe1_identifie" >Si le germe est non-identifié, renseignez ici </label></td>
+                    <td><input type="text" id="germe1_identifie" name="germe1_identifie" class="inputs2"/></td>
+                </tr>
+            </table>
+
+                <br><br><br>
+                    <hr> 
+
+            <table>
+                <tr>
+                    <td><label id="label_antibiogramme_germe1_fait" for="antibiogramme_germe1_fait" >Antibiogramme germe1 fait </label></td>
+                    <td>
+                        <select id="antibiogramme_germe1_fait" name="antibiogramme_germe1_fait" >
+                            <option value=""></option>
+                            <option value="oui">Oui</option>
+                            <option value="non">Non</option>
+                        </select>
+                    </td>					  										
+                </tr>
+            </table>    
+
+<!-- new_part_1 -->
+    <table id="" style="width:95%;border-spacing: 7px;">  
+        <tr>
+            <td><label id="label_virus_influenza" for="virus_influenza" > Virus influenza </label></td>
+            <td>
+                <select id="virus_influenza" name="virus_influenza" >
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </td>					
+        </tr>
+    </table>
+
+    <!-- info_patient_germe START -->
+    <table class="info_virus_influenza" style="display:none; width:95%; border-spacing: 7px;" id="second">
+        <tr>
+            <td><label id="label_code_patient_ipg" for="code_patient_ipg" >Code patient </label></td>
+            <td><input type="text" id="code_patient_ipg" name="code_patient_ipg" class="inputs2"/></td>
+
+            <td><label id="label_date_reception_ipg" for="date_reception_ipg" >Date de réception au labo</label></td>
+            <td><input type="text" id="date_reception_ipg" name="date_reception_ipg" class="inputs2"/></td>
+
+            <td><label id="label_germe_ipg" for="code_germe_ipg" >Code germe </label></td>
+            <td><input type="text" id="code_germe_ipg" name="code_germe_ipg" class="inputs2"/></td>
+        </tr>
+        <br><br><br>
+        <hr>
+        <tr>
+            <td><label for="antibiotique_1" id="label_antibiotique_1">Antibiotique 1</label></td>
+            <td><input type="text" id="code_patient_ipg" name="code_patient_ipg" class="inputs2"/></td>
+            <td>
+                <label for="sensible_1"> Sensible</label>
+                <input type="checkbox" id="sensible_1" name="sensible_1">
+            </td>
+            <td>
+                <label for="intermédiaire_1"> Intermédiaire</label>
+                <input type="checkbox" id="intermédiaire_1" name="intermédiaire_1">
+            </td>
+            <td>
+                <label for="résistant_1"> Résistant</label>
+                <input type="checkbox" id="résistant_1" name="résistant_1">
+            </td>
+        </tr>
+
+
+
+
+    </table>
+
+    <!-- info_patient_germe END-->
+
+<table class="info_virus_influenza" style="display:none; width:95%; border-spacing: 7px;" id="first" >
+    <tr>
+        <td><label id="label_influenza_A" for="influenza_A">Influenza A:</label> </td>
+        <td>
+            <select id="influenza_A" name="influenza_A" >
+                <option value=""></option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label id="label_influenza_B" for="influenza_B">Influenza B:</label> </td>
+        <td>
+            <select id="influenza_B" name="influenza_B" >
+                <option value=""></option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label id="label_influenza_C" for="influenza_C">Influenza C:</label> </td>
+        <td>
+            <select id="influenza_C" name="influenza_C" >
+                <option value=""></option>
+                <option value="Positif">Positif</option>
+                <option value="Negatif">Négatif</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label id="label_autres_virus_respiratoires" for="autres_virus_respiratoires">Autres virus respiratoires:</label> </td>
+        <td>
+            <select id="autres_virus_respiratoires" name="autres_virus_respiratoires" >
+                <option value=""></option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<!-- new_part_1_end -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Modal 2 -->
+    
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- SADJI Form END -->
+
+            <!-- JavaScript Bundle with Popper -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+
+	<!-- AADDED -->
+
+
+</body>
+<link type="text/css" rel="stylesheet" href="css/jquery.autocomplete.css" />                  
+<script src="js/jquery.autocomplete.js?1.0"></script>
+</html>
